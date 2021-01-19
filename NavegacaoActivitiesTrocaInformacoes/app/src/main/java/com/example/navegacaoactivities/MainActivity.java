@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent i) {
-        super.onActivityResult(requestCode, resultCode, i);
         if (resultCode == RESULT_OK && requestCode == SEGUNDAACTIVITY) {
             if (i.hasExtra("MENSAGEM")) {
                 Toast.makeText(MainActivity.this, i.getExtras().getString("MENSAGEM"), Toast.LENGTH_SHORT).show();
             }
         }
+        super.onActivityResult(requestCode, resultCode, i);
     }
 
     @Override
